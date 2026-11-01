@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WCL — Water for Communities’ Life : eau potable, hygiène et santé communautaire.">
+<title>WCL — Water for Communities’ Life</title>
+<style>
+:root{--blue:#1265A8;--pale:#DFF3E8;--ink:#183247;--bg:#F6FAFC}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit}.topbar{background:var(--blue);color:white;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;text-decoration:none}.logo{width:48px;height:48px;flex:0 0 48px;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-weight:900}.brand small{display:block;font-size:11px;font-weight:500}
+nav{display:flex;gap:16px;flex-wrap:wrap}nav a{text-decoration:none;font-size:14px;font-weight:700}.hero{padding:clamp(50px,8vw,100px) 7%;background:linear-gradient(120deg,#1265A8,#187EB5 65%,#1E9B9B);color:white}.hero-inner{max-width:1120px;margin:auto}.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:800}
+h1,h2,h3{line-height:1.15}h1{max-width:760px;font-size:clamp(36px,5vw,64px);margin:16px 0}.hero p{max-width:680px;font-size:clamp(17px,2vw,20px)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.button{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:800;border:2px solid white}.button.light{background:white;color:#125B92}.button.ghost{color:white}
+.section{max-width:1120px;margin:auto;padding:64px 6%}.section-head{max-width:720px;margin-bottom:30px}.section-head h2{font-size:clamp(28px,3vw,40px);margin:0 0 12px}.section-head p{color:#536979}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card,.activity article{background:white;border:1px solid #DCE8EE;padding:24px;border-radius:14px}.icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--pale);font-size:24px;margin-bottom:18px}.card h3{font-size:21px;margin:0 0 10px}.card p,.activity p{margin:0;color:#536979}
+.mission{background:var(--pale);color:#123D2B}.mission-inner{max-width:1120px;margin:auto;padding:58px 6%;display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.mission h2{font-size:clamp(28px,3vw,40px)}.mission-box{border-left:4px solid var(--blue);padding:10px 0 10px 22px}
+.activity{display:grid;grid-template-columns:1fr 1fr;gap:20px}.tag{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;color:var(--blue);background:var(--pale);padding:5px 9px;border-radius:5px;margin-bottom:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.gallery figure{margin:0;background:white;border:1px solid #DCE8EE;border-radius:14px;overflow:hidden}.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--pale)}.gallery figcaption{padding:12px 15px;font-weight:700}
+.callout{background:var(--blue);color:white;padding:42px 6%;text-align:center}.callout h2{font-size:clamp(27px,3vw,38px);margin:0 0 12px}.callout p{max-width:720px;margin:0 auto 22px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-panel{padding:25px;border-radius:14px;background:var(--pale);color:#123D2B}footer{background:#102E42;color:#EAF5FA;padding:25px 6%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:13px}
+.admin-shortcut{position:fixed;right:12px;bottom:12px;z-index:9;background:#102E42;color:#fff;padding:9px 13px;border-radius:8px;text-decoration:none;font-weight:bold;font-size:13px;box-shadow:0 2px 10px #0003}
+@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}nav{gap:12px}.cards,.gallery{grid-template-columns:1fr}.mission-inner,.activity,.contact-grid{grid-template-columns:1fr}.hero{padding-top:54px}}
+</style>
+</head>
+<body>
+<div id="site-root">
+<header class="topbar"><a class="brand" href="#accueil"><span class="logo">WCL</span><span><span id="brand-name">Water for Communities’ Life</span><small id="tagline">L’eau, l’hygiène et la santé des communautés</small></span></a>
+<nav aria-label="Navigation principale"><a href="#apropos">À propos</a><a href="#domaines">Nos domaines</a><a href="#activites">Activités</a><a href="#galerie">Photos</a><a href="#contact">Contact</a></nav></header>
+<main>
+<section class="hero" id="accueil"><div class="hero-inner"><div class="eyebrow" id="hero-eyebrow"></div><h1 id="hero-title"></h1><p id="hero-text"></p><div class="actions"><a class="button light" href="#apropos">Découvrir WCL</a><a class="button ghost" href="#contact">Nous contacter</a></div></div></section>
+<section class="section" id="apropos"><div class="section-head"><div class="eyebrow" style="color:var(--blue)" id="about-eyebrow"></div><h2 id="about-title"></h2><p id="about-text"></p></div><div class="cards" id="about-cards"></div></section>
+<section class="mission"><div class="mission-inner"><div><div class="eyebrow" id="objective-eyebrow"></div><h2 id="objective-title"></h2><p id="objective-text"></p></div><div class="mission-box"><strong>Nos principes d’action</strong><p id="principles"></p><strong>Notre zone d’engagement</strong><p id="zone"></p></div></div></section>
+<section class="section" id="domaines"><div class="section-head"><h2 id="domains-title"></h2><p id="domains-intro"></p></div><div class="cards" id="domains-list"></div></section>
+<section class="section" id="activites"><div class="section-head"><div class="eyebrow" style="color:var(--blue)">Sur le terrain</div><h2 id="activities-title"></h2><p id="activities-intro"></p></div><div class="activity" id="activities-list"></div></section>
+<section class="section" id="galerie"><div class="section-head"><div class="eyebrow" style="color:var(--blue)" id="gallery-eyebrow"></div><h2 id="gallery-title"></h2><p id="gallery-intro"></p></div><div class="gallery" id="gallery-list"></div></section>
+<section class="callout"><h2 id="callout-title"></h2><p id="callout-text"></p><a class="button light" href="#contact">Collaborer avec WCL</a></section>
+<section class="section" id="contact"><div class="section-head"><div class="eyebrow" style="color:var(--blue)">Restons en contact</div><h2 id="contact-title"></h2><p id="contact-intro"></p></div><div class="contact-grid"><div><h3 id="contact-name"></h3><p id="contact-description"></p><p><strong>Zone d’activité :</strong> <span id="location"></span></p><p><strong>E-mail :</strong> <a id="email-link"></a></p><p><strong>Téléphone :</strong> <a id="phone-link"></a></p><p><strong>Réseaux sociaux :</strong> <span id="social-links"></span></p></div><div class="contact-panel"><h3 id="contact-panel-title"></h3><p id="contact-panel-text"></p><p><strong>Contact direct :</strong> utilisez l’adresse e-mail ou le numéro de téléphone officiels.</p></div></div></section>
+</main><footer><p><strong id="footer-name"></strong></p><p>© 2026 WCL · <span id="footer-text"></span></p></footer></div>
+<a class="admin-shortcut" href="/admin/">Administration WCL</a>
+<script>
+const $ = id => document.getElementById(id);
+const put = (id, value) => { if ($(id)) $(id).textContent = value || ""; };
+function card(icon,title,body){const el=document.createElement("article");el.className="card";const i=document.createElement("div");i.className="icon";i.textContent=icon||"•";const h=document.createElement("h3");h.textContent=title||"";const p=document.createElement("p");p.textContent=body||"";el.append(i,h,p);return el;}
+function activityCard(a){const el=document.createElement("article");const tag=document.createElement("span");tag.className="tag";tag.textContent=a.tag||"Activité";const h=document.createElement("h3");h.textContent=a.title||"";const p=document.createElement("p");p.textContent=a.text||"";el.append(tag,h,p);return el;}
+function render(d){
+put("brand-name",d.siteName);document.title="WCL — "+(d.siteName||"Water for Communities’ Life");put("tagline",d.tagline);
+["heroEyebrow:hero-eyebrow","heroTitle:hero-title","heroText:hero-text","aboutEyebrow:about-eyebrow","aboutTitle:about-title","aboutText:about-text","objectiveEyebrow:objective-eyebrow","objectiveTitle:objective-title","objectiveText:objective-text","principles:principles","zone:zone","domainsTitle:domains-title","domainsIntro:domains-intro","activitiesTitle:activities-title","activitiesIntro:activities-intro","galleryEyebrow:gallery-eyebrow","galleryTitle:gallery-title","galleryIntro:gallery-intro","calloutTitle:callout-title","calloutText:callout-text","contactTitle:contact-title","contactIntro:contact-intro","contactDescription:contact-description","location:location","socialLinks:social-links","contactPanelTitle:contact-panel-title","contactPanelText:contact-panel-text","footerText:footer-text"].forEach(pair=>{let [a,b]=pair.split(":");put(b,d[a]);});
+["visionTitle","visionText","missionTitle","missionText","engagementTitle","engagementText"].forEach((k)=>{});
+$("about-cards").replaceChildren(card("◎",d.visionTitle,d.visionText),card("↗",d.missionTitle,d.missionText),card("♡",d.engagementTitle,d.engagementText));
+$("domains-list").replaceChildren(...(d.domains||[]).map(x=>card(x.icon,x.title,x.text)));
+$("activities-list").replaceChildren(...(d.activities||[]).map(activityCard));
+const gallery=$("gallery-list");gallery.replaceChildren();(d.gallery||[]).forEach(x=>{const f=document.createElement("figure"),img=document.createElement("img"),cap=document.createElement("figcaption");img.src=x.image||"";img.alt=x.caption||"Photo d’activité WCL";img.loading="lazy";cap.textContent=x.caption||"";f.append(img,cap);gallery.append(f);});
+put("contact-name",d.siteName+" (WCL)");put("footer-name","WCL — "+d.siteName);
+const em=$("email-link");em.textContent=d.email||"";em.href="mailto:"+(d.email||"");const ph=$("phone-link");ph.textContent=d.phone||"";ph.href="tel:"+(d.phone||"").replace(/[^\d+]/g,"");
+}
+fetch("/data/site.json").then(r=>{if(!r.ok)throw Error("data missing");return r.json()}).then(render).catch(()=>{console.error("Le contenu du site n’a pas pu être chargé. Vérifiez data/site.json.");});
+</script>
+</body></html>
