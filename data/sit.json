@@ -1,1 +1,79 @@
-{}
+{
+  "siteName": "Water for Communities’ Life",
+  "tagline": "L’eau, l’hygiène et la santé des communautés",
+  "heroEyebrow": "Water for Communities’ Life · WCL",
+  "heroTitle": "De l’eau potable pour des communautés en meilleure santé.",
+  "heroText": "WCL est une organisation congolaise qui souhaite contribuer à améliorer l’accès à l’eau potable et encourager de bonnes pratiques d’hygiène au sein des communautés.",
+  "aboutEyebrow": "Qui sommes-nous ?",
+  "aboutTitle": "Agir avec les communautés, pour les communautés.",
+  "aboutText": "WCL est née de la volonté de contribuer à trouver des réponses aux difficultés d’accès à l’eau potable rencontrées par des communautés du Sud-Kivu, en République démocratique du Congo.",
+  "visionTitle": "Notre vision",
+  "visionText": "Des communautés où chacun peut accéder à une eau potable et vivre dans un environnement plus sain.",
+  "missionTitle": "Notre mission",
+  "missionText": "Sensibiliser les populations et contribuer, avec les communautés et les partenaires, à améliorer l’accès à l’eau potable et les pratiques d’hygiène.",
+  "engagementTitle": "Notre engagement",
+  "engagementText": "Promouvoir des gestes simples et des initiatives locales qui protègent la santé et la dignité des personnes.",
+  "objectiveEyebrow": "Notre objectif",
+  "objectiveTitle": "Faire de l’eau et de l’hygiène une priorité collective.",
+  "objectiveText": "Nous voulons aider les communautés à mieux comprendre les liens entre l’eau, l’hygiène et la santé, tout en encourageant des solutions adaptées aux réalités locales.",
+  "principles": "Écoute des communautés · Sensibilisation pratique · Collaboration locale · Respect et responsabilité",
+  "zone": "Sud-Kivu et communautés voisines, selon les projets et les partenariats disponibles.",
+  "domainsTitle": "Nos domaines d’intervention",
+  "domainsIntro": "Des actions de proximité pour soutenir la santé et le bien-être des populations.",
+  "domains": [
+    {
+      "icon": "💧",
+      "title": "Eau potable",
+      "text": "Sensibilisation à l’importance d’une eau propre, de sa bonne conservation et de pratiques sûres de traitement de l’eau à domicile."
+    },
+    {
+      "icon": "✋",
+      "title": "Hygiène et assainissement",
+      "text": "Promotion du lavage régulier des mains, de l’hygiène domestique et de gestes simples pour limiter les risques de maladie."
+    },
+    {
+      "icon": "＋",
+      "title": "Prévention du choléra",
+      "text": "Information sur les modes de transmission du choléra et les mesures de prévention, en lien avec les recommandations sanitaires."
+    }
+  ],
+  "activitiesTitle": "Nos activités et campagnes",
+  "activitiesIntro": "Retrouvez ici les activités réalisées, les campagnes et les nouvelles de WCL.",
+  "activities": [
+    {
+      "tag": "Sensibilisation communautaire",
+      "title": "Hygiène et eau potable à Bukavu",
+      "text": "Campagnes d’information sur l’eau potable, le lavage des mains et les gestes de prévention du choléra. Ajoutez les dates, lieux, photos et partenaires des activités effectivement réalisées."
+    },
+    {
+      "tag": "Partenariats",
+      "title": "Agir ensemble",
+      "text": "WCL souhaite collaborer avec les communautés, les écoles, les associations locales, les services compétents et les partenaires qui partagent ses objectifs."
+    }
+  ],
+  "galleryEyebrow": "Campagne en ligne",
+  "galleryTitle": "Nos activités en images",
+  "galleryIntro": "Photos des activités et campagnes de sensibilisation de WCL sur l’hygiène, l’eau potable et la prévention du choléra.",
+  "gallery": [
+    {
+      "image": "https://placehold.co/800x600?text=Ajoutez+votre+photo",
+      "caption": "Ajoutez votre première photo depuis l’administration"
+    },
+    {
+      "image": "https://placehold.co/800x600?text=Ajoutez+votre+photo",
+      "caption": "Ajoutez une autre photo de WCL"
+    }
+  ],
+  "calloutTitle": "Une hygiène saine protège toute la communauté.",
+  "calloutText": "Les bonnes habitudes commencent par des gestes simples : utiliser une eau sûre, se laver les mains au savon et garder son environnement propre.",
+  "contactTitle": "Contactez WCL",
+  "contactIntro": "Pour une collaboration, une activité de sensibilisation ou un partenariat, contactez notre équipe.",
+  "contactDescription": "Organisation congolaise engagée pour l’accès à l’eau potable, l’hygiène et la santé des communautés.",
+  "location": "Bukavu, Sud-Kivu, RDC",
+  "email": "waterforcommunitieslive@gmail.com",
+  "phone": "+243 990 958 90",
+  "socialLinks": "Liens à ajouter",
+  "contactPanelTitle": "Construisons des solutions ensemble",
+  "contactPanelText": "WCL est ouverte aux échanges avec les communautés, les organisations locales, les institutions et les partenaires techniques et financiers.",
+  "footerText": "Eau potable, hygiène et santé communautaire"
+}
