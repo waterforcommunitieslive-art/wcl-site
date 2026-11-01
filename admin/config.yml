@@ -1,1 +1,57 @@
-# Configuration du site WCL
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+locale: "fr"
+
+collections:
+  - name: "site"
+    label: "Gestion du site WCL"
+    files:
+      - name: "contenu"
+        label: "Textes et activités"
+        file: "data/site.json"
+        fields:
+          - { label: "Nom de l'organisation", name: "siteName", widget: "string" }
+          - { label: "Slogan", name: "tagline", widget: "string" }
+          - { label: "Titre principal", name: "heroTitle", widget: "string" }
+          - { label: "Présentation principale", name: "heroText", widget: "text" }
+          - { label: "Titre À propos", name: "aboutTitle", widget: "string" }
+          - { label: "Présentation de WCL", name: "aboutText", widget: "text" }
+          - { label: "Titre de la vision", name: "visionTitle", widget: "string" }
+          - { label: "Vision", name: "visionText", widget: "text" }
+          - { label: "Titre de la mission", name: "missionTitle", widget: "string" }
+          - { label: "Mission", name: "missionText", widget: "text" }
+          - { label: "Engagement", name: "engagementText", widget: "text" }
+          - { label: "Objectif", name: "objectiveText", widget: "text" }
+          - label: "Domaines d'intervention"
+            name: "domains"
+            widget: "list"
+            fields:
+              - { label: "Icône", name: "icon", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+          - { label: "Titre des activités", name: "activitiesTitle", widget: "string" }
+          - label: "Activités"
+            name: "activities"
+            widget: "list"
+            fields:
+              - { label: "Catégorie", name: "tag", widget: "string" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description", name: "text", widget: "text" }
+          - { label: "Titre de la galerie", name: "galleryTitle", widget: "string" }
+          - label: "Photos"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Légende", name: "caption", widget: "string" }
+          - { label: "Titre de contact", name: "contactTitle", widget: "string" }
+          - { label: "Présentation du contact", name: "contactIntro", widget: "text" }
+          - { label: "Adresse", name: "location", widget: "string" }
+          - { label: "Adresse e-mail", name: "email", widget: "string" }
+          - { label: "Téléphone", name: "phone", widget: "string" }
+          - { label: "Texte du pied de page", name: "footerText", widget: "string" }
