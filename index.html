@@ -15,7 +15,7 @@ h1,h2,h3{line-height:1.15}h1{max-width:760px;font-size:clamp(36px,5vw,64px);marg
 .section{max-width:1120px;margin:auto;padding:64px 6%}.section-head{max-width:720px;margin-bottom:30px}.section-head h2{font-size:clamp(28px,3vw,40px);margin:0 0 12px}.section-head p{color:#536979}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card,.activity article{background:white;border:1px solid #DCE8EE;padding:24px;border-radius:14px}.icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--pale);font-size:24px;margin-bottom:18px}.card h3{font-size:21px;margin:0 0 10px}.card p,.activity p{margin:0;color:#536979}
 .mission{background:var(--pale);color:#123D2B}.mission-inner{max-width:1120px;margin:auto;padding:58px 6%;display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.mission h2{font-size:clamp(28px,3vw,40px)}.mission-box{border-left:4px solid var(--blue);padding:10px 0 10px 22px}
-.activity{display:grid;grid-template-columns:1fr 1fr;gap:20px}.tag{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;color:var(--blue);background:var(--pale);padding:5px 9px;border-radius:5px;margin-bottom:12px}
+.activity{display:grid;grid-template-columns:1fr 1fr;gap:20px}.activity-meta{font-size:14px;color:#31566D;margin:8px 0!important}.activity-image{display:block;width:100%;max-height:320px;object-fit:cover;border-radius:10px;margin-top:16px}.tag{display:inline-block;font-size:12px;font-weight:800;text-transform:uppercase;color:var(--blue);background:var(--pale);padding:5px 9px;border-radius:5px;margin-bottom:12px}
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.gallery figure{margin:0;background:white;border:1px solid #DCE8EE;border-radius:14px;overflow:hidden}.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--pale)}.gallery figcaption{padding:12px 15px;font-weight:700}
 .callout{background:var(--blue);color:white;padding:42px 6%;text-align:center}.callout h2{font-size:clamp(27px,3vw,38px);margin:0 0 12px}.callout p{max-width:720px;margin:0 auto 22px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-panel{padding:25px;border-radius:14px;background:var(--pale);color:#123D2B}footer{background:#102E42;color:#EAF5FA;padding:25px 6%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:13px}
@@ -42,7 +42,17 @@ h1,h2,h3{line-height:1.15}h1{max-width:760px;font-size:clamp(36px,5vw,64px);marg
 const $ = id => document.getElementById(id);
 const put = (id, value) => { if ($(id)) $(id).textContent = value || ""; };
 function card(icon,title,body){const el=document.createElement("article");el.className="card";const i=document.createElement("div");i.className="icon";i.textContent=icon||"•";const h=document.createElement("h3");h.textContent=title||"";const p=document.createElement("p");p.textContent=body||"";el.append(i,h,p);return el;}
-function activityCard(a){const el=document.createElement("article");const tag=document.createElement("span");tag.className="tag";tag.textContent=a.tag||"Activité";const h=document.createElement("h3");h.textContent=a.title||"";const p=document.createElement("p");p.textContent=a.text||"";el.append(tag,h,p);return el;}
+function activityCard(a){
+  const el=document.createElement("article");
+  const tag=document.createElement("span");tag.className="tag";tag.textContent=a.tag||"Activité";
+  const h=document.createElement("h3");h.textContent=a.title||"";
+  el.append(tag,h);
+  if(a.date){const date=document.createElement("p");date.className="activity-meta";date.textContent="Date : "+a.date;el.append(date);}
+  if(a.location){const place=document.createElement("p");place.className="activity-meta";place.textContent="Lieu : "+a.location;el.append(place);}
+  const p=document.createElement("p");p.textContent=a.text||"";el.append(p);
+  if(a.image){const img=document.createElement("img");img.className="activity-image";img.src=a.image;img.alt=a.title||"Photo d’activité WCL";img.loading="lazy";el.append(img);}
+  return el;
+}
 function render(d){
 put("brand-name",d.siteName);document.title="WCL — "+(d.siteName||"Water for Communities’ Life");put("tagline",d.tagline);
 ["heroEyebrow:hero-eyebrow","heroTitle:hero-title","heroText:hero-text","aboutEyebrow:about-eyebrow","aboutTitle:about-title","aboutText:about-text","objectiveEyebrow:objective-eyebrow","objectiveTitle:objective-title","objectiveText:objective-text","principles:principles","zone:zone","domainsTitle:domains-title","domainsIntro:domains-intro","activitiesTitle:activities-title","activitiesIntro:activities-intro","galleryEyebrow:gallery-eyebrow","galleryTitle:gallery-title","galleryIntro:gallery-intro","calloutTitle:callout-title","calloutText:callout-text","contactTitle:contact-title","contactIntro:contact-intro","contactDescription:contact-description","location:location","socialLinks:social-links","contactPanelTitle:contact-panel-title","contactPanelText:contact-panel-text","footerText:footer-text"].forEach(pair=>{let [a,b]=pair.split(":");put(b,d[a]);});
