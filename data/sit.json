@@ -38,32 +38,34 @@
     }
   ],
   "activitiesTitle": "Nos activités et campagnes",
-  "activitiesIntro": "Retrouvez ici les activités réalisées, les campagnes et les nouvelles de WCL.",
+  "activitiesIntro": "Découvrez les actions de sensibilisation menées par WCL auprès des communautés et dans les établissements scolaires.",
   "activities": [
     {
       "tag": "Sensibilisation communautaire",
-      "title": "Hygiène et eau potable à Bukavu",
-      "text": "Campagnes d’information sur l’eau potable, le lavage des mains et les gestes de prévention du choléra. Ajoutez les dates, lieux, photos et partenaires des activités effectivement réalisées."
+      "title": "Sensibilisation sur l’hygiène et l’eau potable",
+      "date": "Date non précisée",
+      "location": "Avenues Albert Kayabu 5 et Évariste Baganda 2, quartier Nyalukemba, Bukavu",
+      "text": "Activité de sensibilisation sur l’hygiène et l’eau potable pour contribuer à la lutte contre le choléra et les maladies hydriques."
     },
     {
-      "tag": "Partenariats",
-      "title": "Agir ensemble",
-      "text": "WCL souhaite collaborer avec les communautés, les écoles, les associations locales, les services compétents et les partenaires qui partagent ses objectifs."
+      "tag": "Sensibilisation scolaire",
+      "title": "Sensibilisation à l’école primaire IMANI CAHI",
+      "date": "Jeudi 12 novembre 2026",
+      "location": "Cahi, quartier Panzi, Bukavu",
+      "text": "Les enfants ont été instruits et encouragés à respecter les principes d’hygiène et à consommer de l’eau potable."
+    },
+    {
+      "tag": "Sensibilisation scolaire",
+      "title": "Sensibilisation à l’école secondaire TUPENDA",
+      "date": "Samedi 14 novembre 2026",
+      "location": "Avenue Évariste Baganda 2, Bukavu",
+      "text": "Échange avec les élèves sur les microbes et les conséquences de la négligence des règles d’hygiène."
     }
   ],
   "galleryEyebrow": "Campagne en ligne",
   "galleryTitle": "Nos activités en images",
-  "galleryIntro": "Photos des activités et campagnes de sensibilisation de WCL sur l’hygiène, l’eau potable et la prévention du choléra.",
-  "gallery": [
-    {
-      "image": "https://placehold.co/800x600?text=Ajoutez+votre+photo",
-      "caption": "Ajoutez votre première photo depuis l’administration"
-    },
-    {
-      "image": "https://placehold.co/800x600?text=Ajoutez+votre+photo",
-      "caption": "Ajoutez une autre photo de WCL"
-    }
-  ],
+  "galleryIntro": "Les photos des activités de WCL seront publiées dans cette galerie depuis l’espace d’administration.",
+  "gallery": [],
   "calloutTitle": "Une hygiène saine protège toute la communauté.",
   "calloutText": "Les bonnes habitudes commencent par des gestes simples : utiliser une eau sûre, se laver les mains au savon et garder son environnement propre.",
   "contactTitle": "Contactez WCL",
