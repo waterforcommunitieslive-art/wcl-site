@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WCL — Water for Communities' Life</title>
+<style>
+:root {
+  --site-primary: #1265A8;
+  --site-on-primary: #FFFFFF;
+  --site-secondary: #DFF3E8;
+  --site-on-secondary: #123D2B;
+  --site-background: #F6FAFC;
+  --site-on-background: #183247;
+  --site-font-body: Arial, Helvetica, sans-serif;
+  --site-font-heading: Arial, Helvetica, sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; color-scheme: light dark; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); line-height: 1.6; }
+#site-root { background-color: var(--site-background); color: var(--site-on-background); width: 100%; min-height: 100vh; border-radius: 0; }
+a { color: inherit; }
+.topbar { background: var(--site-primary); color: var(--site-on-primary); padding: calc(12px * var(--site-spacing-scale)) 5%; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }
+.logo { width:48px; height:48px; flex:0 0 48px; border:2px solid currentColor; border-radius:50%; display:grid; place-items:center; font-weight:900; font-size:15px; }
+.brand small { display:block; font-size:11px; font-weight:500; letter-spacing:.3px; }
+nav { display:flex; gap:20px; flex-wrap:wrap; justify-content:flex-end; }
+nav a { text-decoration:none; font-size:14px; font-weight:700; }
+nav a:hover, nav a:focus { text-decoration:underline; }
+.hero { position:relative; overflow:hidden; padding:clamp(50px, 8vw, 100px) 7%; background:linear-gradient(120deg, var(--site-primary) 0%, #187EB5 65%, #1E9B9B 100%); color:#fff; }
+.hero::after { content:""; position:absolute; width:360px; height:360px; border:1px solid rgba(255,255,255,.22); border-radius:50%; right:-110px; top:-130px; box-shadow:0 0 0 35px rgba(255,255,255,.05),0 0 0 75px rgba(255,255,255,.04); pointer-events:none; opacity:var(--site-decoration-opacity); }
+.hero-inner { max-width:1120px; margin:auto; position:relative; z-index:1; }
+.eyebrow { text-transform:uppercase; font-size:12px; letter-spacing:2px; font-weight:800; }
+h1,h2,h3 { font-family:var(--site-font-heading); line-height:1.15; }
+h1 { max-width:760px; font-size:calc(clamp(36px, 5vw, 64px) * var(--site-heading-scale)); margin:16px 0; }
+.hero p { max-width:680px; font-size:clamp(17px,2vw,20px); }
+.actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+.button { display:inline-block; padding:12px 20px; border-radius:calc(8px * var(--site-radius-scale)); text-decoration:none; font-weight:800; border:2px solid #fff; }
+.button.light { background:#fff; color:#125B92; }
+.button.ghost { color:#fff; background:transparent; }
+.section { max-width:1120px; margin:auto; padding:calc(64px * var(--site-spacing-scale)) 6%; }
+.section-head { max-width:720px; margin-bottom:30px; }
+.section-head h2 { font-size:calc(clamp(28px,3vw,40px) * var(--site-heading-scale)); margin:0 0 12px; }
+.section-head p { margin:0; color:light-dark(#536979,#C1D1DB); }
+.cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.card { background:light-dark(#FFFFFF,#172B39); border:1px solid light-dark(#DCE8EE,#314957); padding:24px; border-radius:calc(14px * var(--site-radius-scale)); }
+.icon { width:48px; height:48px; border-radius:12px; display:grid; place-items:center; background:var(--site-secondary); color:var(--site-on-secondary); font-size:24px; margin-bottom:18px; }
+.card h3 { font-size:21px; margin:0 0 10px; }
+.card p { margin:0; color:light-dark(#536979,#C1D1DB); }
+.mission { background:var(--site-secondary); color:var(--site-on-secondary); }
+.mission-inner { max-width:1120px; margin:auto; padding:58px 6%; display:grid; grid-template-columns:1fr 1fr; gap:38px; align-items:center; }
+.mission h2 { font-size:calc(clamp(28px,3vw,40px) * var(--site-heading-scale)); margin:0 0 14px; }
+.mission-box { border-left:4px solid var(--site-primary); padding:10px 0 10px 22px; }
+.mission-box strong { display:block; margin-bottom:6px; }
+.activity { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.activity article { background:light-dark(#FFFFFF,#172B39); padding:26px; border-radius:calc(14px * var(--site-radius-scale)); border:1px solid light-dark(#DCE8EE,#314957); }
+.activity h3 { margin-top:0; }
+.gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.gallery figure { margin:0; background:light-dark(#FFFFFF,#172B39); border:1px solid light-dark(#DCE8EE,#314957); border-radius:14px; overflow:hidden; }
+.gallery img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; background:var(--site-secondary); }
+.gallery figcaption { padding:12px 15px; font-weight:700; }
+.tag { display:inline-block; font-size:12px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; color:var(--site-primary); background:var(--site-secondary); padding:5px 9px; border-radius:5px; margin-bottom:12px; }
+.callout { background:var(--site-primary); color:var(--site-on-primary); padding:42px 6%; text-align:center; }
+.callout h2 { font-size:calc(clamp(27px,3vw,38px) * var(--site-heading-scale)); margin:0 0 12px; }
+.callout p { max-width:720px; margin:0 auto 22px; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+.contact-panel { padding:25px; border-radius:calc(14px * var(--site-radius-scale)); background:var(--site-secondary); color:var(--site-on-secondary); }
+.contact-panel p { margin:8px 0; }
+footer { background:#102E42; color:#EAF5FA; padding:25px 6%; display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; font-size:13px; }
+footer p { margin:0; }
+@media (max-width:760px) { .topbar { align-items:flex-start; flex-direction:column; } nav { justify-content:flex-start; gap:12px; } .cards,.gallery { grid-template-columns:1fr; } .mission-inner,.activity,.contact-grid { grid-template-columns:1fr; } .hero { padding-top:54px; } }
+</style>
+</head>
+<body>
+<div id="site-root" data-sites-preview-theme="custom">
+<header class="topbar">
+  <a class="brand" href="#accueil" style="text-decoration:none" aria-label="WCL, accueil"><span class="logo">WCL</span><span>Water for Communities’ Life<small>L’eau, l’hygiène et la santé des communautés</small></span></a>
+  <nav aria-label="Navigation principale"><a href="#apropos">À propos</a><a href="#domaines">Nos domaines</a><a href="#activites">Activités</a><a href="#galerie">Photos</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="hero" id="accueil"><div class="hero-inner"><div class="eyebrow">Water for Communities’ Life · WCL</div><h1>De l’eau potable pour des communautés en meilleure santé.</h1><p>WCL est une organisation congolaise qui souhaite contribuer à améliorer l’accès à l’eau potable et encourager de bonnes pratiques d’hygiène au sein des communautés.</p><div class="actions"><a class="button light" href="#apropos">Découvrir WCL</a><a class="button ghost" href="#contact">Nous contacter</a></div></div></section>
+<section class="section" id="apropos"><div class="section-head"><div class="eyebrow" style="color:var(--site-primary)">Qui sommes-nous ?</div><h2>Agir avec les communautés, pour les communautés.</h2><p>WCL est née de la volonté de contribuer à trouver des réponses aux difficultés d’accès à l’eau potable rencontrées par des communautés du Sud-Kivu, en République démocratique du Congo.</p></div><div class="cards"><article class="card"><div class="icon" aria-hidden="true">◎</div><h3>Notre vision</h3><p>Des communautés où chacun peut accéder à une eau potable et vivre dans un environnement plus sain.</p></article><article class="card"><div class="icon" aria-hidden="true">↗</div><h3>Notre mission</h3><p>Sensibiliser les populations et contribuer, avec les communautés et les partenaires, à améliorer l’accès à l’eau potable et les pratiques d’hygiène.</p></article><article class="card"><div class="icon" aria-hidden="true">♡</div><h3>Notre engagement</h3><p>Promouvoir des gestes simples et des initiatives locales qui protègent la santé et la dignité des personnes.</p></article></div></section>
+<section class="mission"><div class="mission-inner"><div><div class="eyebrow">Notre objectif</div><h2>Faire de l’eau et de l’hygiène une priorité collective.</h2><p>Nous voulons aider les communautés à mieux comprendre les liens entre l’eau, l’hygiène et la santé, tout en encourageant des solutions adaptées aux réalités locales.</p></div><div class="mission-box"><strong>Nos principes d’action</strong><p>Écoute des communautés · Sensibilisation pratique · Collaboration locale · Respect et responsabilité</p><strong>Notre zone d’engagement</strong><p>Sud-Kivu et communautés voisines, selon les projets et les partenariats disponibles.</p></div></div></section>
+<section class="section" id="domaines"><div class="section-head"><div class="eyebrow" style="color:var(--site-primary)">Ce que nous faisons</div><h2>Nos domaines d’intervention</h2><p>Des actions de proximité pour soutenir la santé et le bien-être des populations.</p></div><div class="cards"><article class="card"><div class="icon" aria-hidden="true">💧</div><h3>Eau potable</h3><p>Sensibilisation à l’importance d’une eau propre, de sa bonne conservation et de pratiques sûres de traitement de l’eau à domicile.</p></article><article class="card"><div class="icon" aria-hidden="true">✋</div><h3>Hygiène et assainissement</h3><p>Promotion du lavage régulier des mains, de l’hygiène domestique et de gestes simples pour limiter les risques de maladie.</p></article><article class="card"><div class="icon" aria-hidden="true">＋</div><h3>Prévention du choléra</h3><p>Information sur les modes de transmission du choléra et les mesures de prévention, en lien avec les recommandations sanitaires.</p></article></div></section>
+<section class="section" id="activites"><div class="section-head"><div class="eyebrow" style="color:var(--site-primary)">Sur le terrain</div><h2>Nos activités et campagnes</h2><p>Cette rubrique pourra présenter les activités réalisées, les prochaines campagnes et les résultats documentés de WCL.</p></div><div class="activity"><article><span class="tag">Sensibilisation communautaire</span><h3>Hygiène et eau potable à Bukavu</h3><p>Campagnes d’information sur l’eau potable, le lavage des mains et les gestes de prévention du choléra. Ajoutez ici les dates, lieux, photos et partenaires des activités effectivement réalisées.</p></article><article><span class="tag">Partenariats</span><h3>Agir ensemble</h3><p>WCL souhaite collaborer avec les communautés, les écoles, les associations locales, les services compétents et les partenaires qui partagent ses objectifs.</p></article></div></section>
+<section class="section" id="galerie"><div class="section-head"><div class="eyebrow" style="color:var(--site-primary)">Campagne en ligne</div><h2>Nos activités en images</h2><p>Participation à la campagne de sensibilisation en ligne de WCL sur l’hygiène, l’eau potable et la prévention du choléra.</p></div><div class="gallery"><figure><img src="photos/activite-1.jpg" alt="Participant à la campagne numérique WCL pour une hygiène saine"><figcaption>Je m’engage pour une hygiène saine — Participation 1</figcaption></figure><figure><img src="photos/activite-2.jpg" alt="Participant à la campagne numérique WCL pour une hygiène saine"><figcaption>Je m’engage pour une hygiène saine — Participation 2</figcaption></figure></div></section>
+<section class="callout"><h2>Une hygiène saine protège toute la communauté.</h2><p>Les bonnes habitudes commencent par des gestes simples : utiliser une eau sûre, se laver les mains au savon et garder son environnement propre.</p><a class="button light" href="#contact">Collaborer avec WCL</a></section>
+<section class="section" id="contact"><div class="section-head"><div class="eyebrow" style="color:var(--site-primary)">Restons en contact</div><h2>Contactez WCL</h2><p>Pour une collaboration, une activité de sensibilisation ou un partenariat, contactez notre équipe.</p></div><div class="contact-grid"><div><h3>Water for Communities’ Life (WCL)</h3><p>Organisation congolaise engagée pour l’accès à l’eau potable, l’hygiène et la santé des communautés.</p><p><strong>Zone d’activité :</strong> Bukavu, Sud-Kivu, RDC</p><p><strong>E-mail :</strong> <a href="mailto:waterforcommunitieslive@gmail.com">waterforcommunitieslive@gmail.com</a></p><p><strong>Téléphone :</strong> <a href="tel:+24399095890">+243 990 958 90</a></p><p><strong>Réseaux sociaux :</strong> liens à ajouter</p></div><div class="contact-panel"><h3>Construisons des solutions ensemble</h3><p>WCL est ouverte aux échanges avec les communautés, les organisations locales, les institutions et les partenaires techniques et financiers.</p><p><strong>Contact direct :</strong> écrivez-nous à l’adresse e-mail officielle ou appelez notre numéro de téléphone.</p></div></div></section>
+</main>
+<footer><p><strong>WCL — Water for Communities’ Life</strong></p><p>© 2026 WCL · Eau potable, hygiène et santé communautaire</p></footer>
+</div>
+</body>
+</html>
